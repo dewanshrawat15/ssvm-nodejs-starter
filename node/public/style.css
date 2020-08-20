@@ -1,0 +1,55 @@
+html, body{
+	margin: 0;
+	overflow: hidden;
+}
+
+.section-home{
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+}
+
+.title{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 48px;
+	font-family: "Product Sans", "Josefin Sans";
+}
+
+.input{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 32vw;
+	height: 8vh;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #15171c;
+	padding-left: 18px;
+	padding-right: 18px;
+	font-family: "Product Sans", "Josefin Sans";
+	font-size: 14px;
+}
+
+#decr-inp{
+	top: 60%;
+}
+
+.submit-bttn{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	font-family: "Product Sans", "Josefin Sans";
+	font-size: 15px;
+	color: #fff;
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	background: #15171c;
+	cursor: pointer;
+	padding: 24px 42px;
+	transform: translate(-50%, -50%);
+}
