@@ -34,13 +34,13 @@ html, body{
 	font-size: 14px;
 }
 
-#decr-inp{
-	top: 60%;
+#private-key-inp{
+	top: 54%;
 }
 
 .submit-bttn{
 	position: absolute;
-	top: 75%;
+	top: 70%;
 	left: 50%;
 	font-family: "Product Sans", "Josefin Sans";
 	font-size: 15px;
@@ -52,4 +52,26 @@ html, body{
 	cursor: pointer;
 	padding: 24px 42px;
 	transform: translate(-50%, -50%);
+}
+
+.enc-bttn{
+    top: 54%;
+}
+
+.message{
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Product Sans", "Josefin Sans";
+	font-size: 15px;
+}
+
+.data, .public_key, .private_key{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.decrypt-mssg{
+    top: 80%;
 }

@@ -12,9 +12,12 @@
 	$(function(){
 
 		$(".submit-bttn").click(function(){
-            var data = { message: $("#encr-inp").val() };
+            var data = {
+                message: $("#decr-inp").val(),
+                private_key: $("#private-key-inp").val()
+            };
             $.ajax({
-                url: '/encrypt',
+                url: '/decrypt',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: 'application/json; charset=utf-8',
@@ -22,9 +25,7 @@
                 async: false,
                 success: function(msg) {
                     console.log(msg);
-                    $('.data').text("Data: " + JSON.stringify(msg.message));
-                    $('.public_key').text("Public key: " + JSON.stringify(msg.public));
-                    $('.private_key').text("Private key: " + JSON.stringify(msg.private));
+                    $('.data').text("Message: " + msg.message);
                 }
             });
         })
@@ -35,14 +36,13 @@
 
 <body>
 <div class="section-home">
-	<div class="title">Encrypto</div>
-		<textarea class="input" id="encr-inp" type="text" placeholder="Your message here..."></textarea>
-		<button type="submit" class="enc-bttn submit-bttn">Encrypt Message</button>
+	<div class="title">Decrypto</div>
+		<textarea class="input" id="decr-inp" type="text" placeholder="Your message here..."></textarea>
+        <textarea type="text" class="input" id="private-key-inp" placeholder="Private Key"></textarea>
+		<button type="submit" class="submit-bttn">Decrypt Message</button>
     </div>
-    <div class="message">
+    <div class="message decrypt-mssg">
         <p class="data"></p>
-        <p class="public_key"></p>
-        <p class="private_key"></p>
     </div>
 </body>
 </html>
